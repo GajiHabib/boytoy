@@ -49,7 +49,7 @@ class Homepage extends StatelessWidget {
           children: [
             Shuru(index: 1),
           Jonopirio(index: 1),
-           Ketagori(index: 1),
+           Ketagori(),
             Center(child: Text('Notifications Tab Content')),
             Center(child: Text('Home Tab Content')),
             Center(child: Text('Search Tab Content')),

@@ -30,45 +30,29 @@ final int index;
           GridView.builder(
               physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemCount:12,
+            itemCount:di.length,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              childAspectRatio:0.4,
               crossAxisCount: 3,
             ),
             itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(12),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-          Container(
-            height: 150, // Adjust height as needed
-            width: double.infinity,
-            child: Image.asset(
-              di[index].img,
-              fit: BoxFit.cover,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              di[index].title,
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(di[index].writer),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(di[index].tara),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(di[index].price),
-          ),
-                  ],
-                ),
+              return Column(
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.asset(
+                            di[index].img,
+                            fit: BoxFit.fill,
+                          ),
+                        ),
+                        Text(di[index].title,
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Text(di[index].writer),
+                        Text(di[index].tara),
+                        Text(di[index].price),
+                ],
               );
             },
           )

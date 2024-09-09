@@ -76,57 +76,9 @@ class Shuru extends StatelessWidget {
           ],
         ),
       ),
-      Padding(
-        padding: const EdgeInsets.all(10),
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            'এ সপ্তাহের বেস্ট সেলার',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            textAlign: TextAlign.left,
-          ),
-        ),
-      ),
-      GridView.builder(
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          itemCount: 10,
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount
-              ( crossAxisCount: 2,),
-          itemBuilder: (context, index) {
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Image.asset(ru[index].img, fit: BoxFit.fill),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        ru[index].title,
-                        style: TextStyle(fontSize: 16),
-                      ),
-                      Text(ru[index].writer),
-                      Text(ru[index].tara),
-                      Text(
-                        ru[index].price,
-                        style: TextStyle(fontSize: 11),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            );
-          }),
+      BooksGridView(gridTitle: 'এ সপ্তাহের বেস্ট সেলার', gridList: ru),
+      BooksGridView(gridTitle: 'Bochore Sera Boi', gridList: ru),
+       BooksGridView(gridTitle: 'ইসলামিক বই', gridList: ru),
       Padding(
         padding: const EdgeInsets.all(12),
         child: Row(
@@ -141,6 +93,76 @@ class Shuru extends StatelessWidget {
         ),
       )
     ]));
+  }
+}
+
+class BooksGridView extends StatelessWidget {
+
+  final String gridTitle;
+  final List gridList;
+  const BooksGridView({
+    super.key,
+    required this.gridTitle,
+    required this.gridList,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(10),
+          child: Align(
+            alignment: Alignment.centerLeft,
+            child: Text(
+              gridTitle,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left,
+            ),
+          ),
+        ),
+        GridView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: gridList.length,
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount
+                ( crossAxisCount: 2,),
+            itemBuilder: (context, index) {
+              var bookInfo = gridList[index];
+              return Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Image.asset(bookInfo.img, fit: BoxFit.fill),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          bookInfo.title,
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        Text(bookInfo.writer),
+                        Text(bookInfo.tara),
+                        Text(
+                          bookInfo.price,
+                          style: TextStyle(fontSize: 11),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              );
+            }),
+      ],
+    );
   }
 }
 
