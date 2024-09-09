@@ -1,11 +1,10 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unused_import, must_be_immutable, unnecessary_import, unused_label
+//  unused_import, must_be_immutable, unnecessary_import, unused_label
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:boytoy/Tabbar/hshur.dart';
+import 'package:boytoy/Tabbar/jonopirio.dart';
 import 'package:boytoy/Tabbar/shuru.dart';
-import 'package:boytoy/pageviwe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 class Homepage extends StatelessWidget {
   Homepage({super.key});
   @override
@@ -38,20 +37,17 @@ class Homepage extends StatelessWidget {
          ]),
          
       ),
+      bottomNavigationBar: BottomNavigationBar(items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home),label: 'শুরু'),
+         BottomNavigationBarItem(icon: Icon(Icons.self_improvement),label: ' সেল্ফ'),
+          BottomNavigationBarItem(icon: Icon(Icons.book),label: 'বই'),
+         
+      ]),
       
        body: TabBarView(
           children: [
-           Center(child:GridView.builder(
-              shrinkWrap: true,
-              itemCount: 10,
-              gridDelegate: 
-            SliverGridDelegateWithFixedCrossAxisCount
-            (crossAxisCount:2), itemBuilder:(
-              context, index) {
-              return Shuru(index: index);
-            },)),
-       
-            Center(child: Text('Search Tab Content')),
+            Shuru(index: 1),
+          Jonopirio(index: 1,),
             Center(child: Text('Notifications Tab Content')),
             Center(child: Text('Home Tab Content')),
             Center(child: Text('Search Tab Content')),

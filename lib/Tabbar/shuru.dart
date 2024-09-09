@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,33 +8,139 @@ class Shuru extends StatelessWidget {
   final int index;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Expanded(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
+    return SingleChildScrollView(
+        child: Column(children: [
+      Container(
+        height: 150,
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: PageView(
             children: [
-              Image.asset(ru[index].img,fit: BoxFit.fill),
-              SizedBox(width:10,),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                 Text(ru[index].title,style: TextStyle(fontSize:16),),
-                 Text(ru[index].writer),
-                 Text(ru[index].tara),
-                 Text(ru[index].price,style: TextStyle(fontSize: 11),)
-                ],),
-              )
-               
+              Image.asset(
+                'assets/page.jpg',
+                fit: BoxFit.cover,
+              ),
+              Image.asset(
+                'assets/page1.jpg',
+                fit: BoxFit.cover,
+              ),
             ],
           ),
         ),
       ),
-    );
+      Padding(
+        padding: const EdgeInsets.all(20),
+        child: Row(
+          children: [
+            Expanded(child: Image.asset('assets/boy.jpg')),
+            SizedBox(
+              width: 10,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'তোমার মনের মধ্যিখানি',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('মিমি মুসকান'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('Published by'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('Published Date'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('Language'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text('Categories'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  '60৳',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+      Padding(
+        padding: const EdgeInsets.all(10),
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'এ সপ্তাহের বেস্ট সেলার',
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            textAlign: TextAlign.left,
+          ),
+        ),
+      ),
+      GridView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: 10,
+          gridDelegate:
+              SliverGridDelegateWithFixedCrossAxisCount
+              ( crossAxisCount: 2,),
+          itemBuilder: (context, index) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Image.asset(ru[index].img, fit: BoxFit.fill),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        ru[index].title,
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      Text(ru[index].writer),
+                      Text(ru[index].tara),
+                      Text(
+                        ru[index].price,
+                        style: TextStyle(fontSize: 11),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            );
+          }),
+      Padding(
+        padding: const EdgeInsets.all(12),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'এ সপ্তাহে নতুন',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
+            Text('আরো দেখুন'),
+          ],
+        ),
+      )
+    ]));
   }
 }
 
@@ -113,3 +221,4 @@ List ru = [
       tara: '++++++++',
       price: '20৳'),
 ];
+
