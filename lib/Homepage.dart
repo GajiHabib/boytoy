@@ -2,6 +2,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:boytoy/Tabbar/jonopirio.dart';
+import 'package:boytoy/Tabbar/ketagori.dart';
 import 'package:boytoy/Tabbar/shuru.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -47,7 +48,8 @@ class Homepage extends StatelessWidget {
        body: TabBarView(
           children: [
             Shuru(index: 1),
-          Jonopirio(index: 1,),
+          Jonopirio(index: 1),
+           Ketagori(index: 1),
             Center(child: Text('Notifications Tab Content')),
             Center(child: Text('Home Tab Content')),
             Center(child: Text('Search Tab Content')),
