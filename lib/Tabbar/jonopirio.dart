@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'dart:math';
 
@@ -11,7 +11,7 @@ final int index;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(children: [
+      child: Column(children:[
         Container(
           height: 150,
           child: Padding(
@@ -50,24 +50,22 @@ final int index;
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Expanded(
-              child: Text(
-                di[index].title,
-                style: TextStyle(fontWeight: FontWeight.bold),
-              ),
+            child: Text(
+              di[index].title,
+              style: TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Expanded(child: Text(di[index].writer)),
+            child: Text(di[index].writer),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Expanded(child: Text(di[index].tara)),
+            child: Text(di[index].tara),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Expanded(child: Text(di[index].price)),
+            child: Text(di[index].price),
           ),
                   ],
                 ),
