@@ -25,7 +25,7 @@ final int index;
           Align(
             alignment:Alignment.centerLeft,
             child: Text('জনপ্রিয় লেখক',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),)),
-               gridviewdata(gridList:wri),
+               Expanded(child: gridviewdata(gridList:wri)),
         ],
         ),
       ),
