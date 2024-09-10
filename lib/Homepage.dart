@@ -3,7 +3,10 @@
 
 import 'package:boytoy/Tabbar/jonopirio.dart';
 import 'package:boytoy/Tabbar/ketagori.dart';
+import 'package:boytoy/Tabbar/sherafriboi.dart';
+import 'package:boytoy/Tabbar/sherakenaboi.dart';
 import 'package:boytoy/Tabbar/shuru.dart';
+import 'package:boytoy/Tabbar/wright.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 class Homepage extends StatelessWidget {
@@ -44,15 +47,14 @@ class Homepage extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(Icons.book),label: 'বই'),
          
       ]),
-      
        body: TabBarView(
           children: [
             Shuru(index: 1),
           Jonopirio(index: 1),
            Ketagori(),
-            Center(child: Text('Notifications Tab Content')),
-            Center(child: Text('Home Tab Content')),
-            Center(child: Text('Search Tab Content')),
+           Sherafriboi(index: 1),
+           Sherakenaboi(index: 1),
+           Wright(index: 1,),
             Center(child: Text('Notifications Tab Content')),
             Center(child: Text('Notifications Tab Content'))
           ],

@@ -79,19 +79,6 @@ class Shuru extends StatelessWidget {
       BooksGridView(gridTitle: 'এ সপ্তাহের বেস্ট সেলার', gridList: ru),
       BooksGridView(gridTitle: 'Bochore Sera Boi', gridList: ru),
        BooksGridView(gridTitle: 'ইসলামিক বই', gridList: ru),
-      Padding(
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              'এ সপ্তাহে নতুন',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
-            Text('আরো দেখুন'),
-          ],
-        ),
-      )
     ]));
   }
 }
