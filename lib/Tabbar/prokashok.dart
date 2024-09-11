@@ -3,8 +3,8 @@
 
 import 'package:flutter/material.dart';
 
-class Wright extends StatelessWidget {
-  const Wright({super.key, required this.index});
+class prokashok extends StatelessWidget {
+  const prokashok({super.key, required this.index});
 final int index;
   @override
   Widget build(BuildContext context) {

@@ -3,6 +3,7 @@
 
 import 'package:boytoy/Tabbar/jonopirio.dart';
 import 'package:boytoy/Tabbar/ketagori.dart';
+import 'package:boytoy/Tabbar/prokashok.dart';
 import 'package:boytoy/Tabbar/sherafriboi.dart';
 import 'package:boytoy/Tabbar/sherakenaboi.dart';
 import 'package:boytoy/Tabbar/shuru.dart';
@@ -51,12 +52,12 @@ class Homepage extends StatelessWidget {
           children: [
             Shuru(index: 1),
           Jonopirio(index: 1),
-           Ketagori(),
+           Ketagori(index: 1,),
            Sherafriboi(index: 1),
            Sherakenaboi(index: 1),
            Wright(index: 1,),
-            Center(child: Text('Notifications Tab Content')),
-            Center(child: Text('Notifications Tab Content'))
+            prokashok(index: 1),
+           
           ],
         ),
         

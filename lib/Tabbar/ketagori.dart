@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 class Ketagori extends StatelessWidget {
   const Ketagori({
-    super.key,
+    super.key, required this.index,
   });
-
+final int index;
   @override
   Widget build(BuildContext context) {
     var arrone = [
@@ -24,12 +24,26 @@ class Ketagori extends StatelessWidget {
       'সমকালিন গল্প',
       'অডিও'
     ];
-
+// var habi=[
+//  ' assets/abaut1.jpg'
+//   ' assets/abaut2.jpg'
+//    ' assets/abaut3.jpg'
+//     ' assets/abaut4.jpg'
+//      ' assets/abaut5.jpg'
+//       ' assets/abaut6.jpg'
+//        ' assets/abaut7.jpg'
+//        ' assets/abaut8.jpg'
+//   ' assets/abaut9.jpg'
+//    ' assets/abaut10.jpg'
+//     ' assets/abaut11.jpg'
+//      ' assets/abaut12.jpg'
+// ];
     return Scaffold(
         body: ListView.separated(
-      itemBuilder: (context, index) {
+      itemBuilder: (
+        context, index) {
         return Card(
-          color: Colors.amber.shade300,
+          color: Colors.green.shade300,
           child: ListTile(
             title: Text(arrone[index]),
             trailing: Icon(Icons.arrow_forward_ios),
@@ -37,7 +51,8 @@ class Ketagori extends StatelessWidget {
               height:50,
               width: 50,
               decoration: BoxDecoration(color: Colors.cyan.shade400),
-              child: Icon(Icons.family_restroom)),
+              // child: Image.asset(habi[index]),
+              ),
             
           ),
         );
@@ -53,10 +68,23 @@ class Ketagori extends StatelessWidget {
   }
 }
 class coll{
- final String icodata;
+ final String Image;
 
-  coll({required this.icodata});
+  coll({required this.Image});
+
+  
 }
 List habi=[
-  coll(icodata: '')
+ coll(Image: 'assets/abaut1.jpg'),
+  coll(Image: 'assets/abaut1.jpg'),
+   coll(Image: 'assets/abaut1.jpg'),
+    coll(Image: 'assets/abaut1.jpg'),
+     coll(Image: 'assets/abaut1.jpg'),
+      coll(Image: 'assets/abaut1.jpg'),
+       coll(Image: 'assets/abaut1.jpg'),
+        coll(Image: 'assets/abaut1.jpg'),
+         coll(Image: 'assets/abaut1.jpg'),
+          coll(Image: 'assets/abaut1.jpg'),
+           coll(Image: 'assets/abaut1.jpg'),
+            coll(Image: 'assets/abaut1.jpg'),
 ];
