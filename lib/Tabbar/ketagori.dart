@@ -24,20 +24,6 @@ final int index;
       'সমকালিন গল্প',
       'অডিও'
     ];
-// var habi=[
-//  ' assets/abaut1.jpg'
-//   ' assets/abaut2.jpg'
-//    ' assets/abaut3.jpg'
-//     ' assets/abaut4.jpg'
-//      ' assets/abaut5.jpg'
-//       ' assets/abaut6.jpg'
-//        ' assets/abaut7.jpg'
-//        ' assets/abaut8.jpg'
-//   ' assets/abaut9.jpg'
-//    ' assets/abaut10.jpg'
-//     ' assets/abaut11.jpg'
-//      ' assets/abaut12.jpg'
-// ];
     return Scaffold(
         body: ListView.separated(
       itemBuilder: (
@@ -47,12 +33,13 @@ final int index;
           child: ListTile(
             title: Text(arrone[index]),
             trailing: Icon(Icons.arrow_forward_ios),
-            leading: Container(
-              height:50,
-              width: 50,
-              decoration: BoxDecoration(color: Colors.cyan.shade400),
-              // child: Image.asset(habi[index]),
-              ),
+            leading: Image.asset(habi[index].Image),
+            // leading: Container(
+            //   height:50,
+            //   width: 50,
+            //   decoration: BoxDecoration(color: Colors.cyan.shade400),
+            //   // child: Image.asset(habi[index]),
+            //   ),
             
           ),
         );
@@ -76,15 +63,16 @@ class coll{
 }
 List habi=[
  coll(Image: 'assets/abaut1.jpg'),
-  coll(Image: 'assets/abaut1.jpg'),
-   coll(Image: 'assets/abaut1.jpg'),
-    coll(Image: 'assets/abaut1.jpg'),
-     coll(Image: 'assets/abaut1.jpg'),
-      coll(Image: 'assets/abaut1.jpg'),
-       coll(Image: 'assets/abaut1.jpg'),
-        coll(Image: 'assets/abaut1.jpg'),
-         coll(Image: 'assets/abaut1.jpg'),
-          coll(Image: 'assets/abaut1.jpg'),
-           coll(Image: 'assets/abaut1.jpg'),
-            coll(Image: 'assets/abaut1.jpg'),
+  coll(Image: 'assets/abaut2.jpg'),
+   coll(Image: 'assets/abaut3.jpg'),
+    coll(Image: 'assets/abaut4.jpg'),
+     coll(Image: 'assets/abaut5.jpg'),
+      coll(Image: 'assets/abaut6.jpg'),
+       coll(Image: 'assets/abaut7.jpg'),
+        coll(Image: 'assets/abaut8.jpg'),
+         coll(Image: 'assets/abaut9.jpg'),
+          coll(Image: 'assets/abaut10.jpg'),
+           coll(Image: 'assets/abaut11.jpg'),
+            coll(Image: 'assets/abaut12.jpg'),
+            coll(Image: 'assets/abaut12.jpg'),
 ];

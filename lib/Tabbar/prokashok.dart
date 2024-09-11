@@ -78,14 +78,14 @@ class wrightt{
   wrightt({required this.Image, required this.wrighte, required this.data});
 }
 List wri=[
-  wrightt(Image: 'assets/wright1.jpg', wrighte:'Ustadh Nouman', data: '২টি বই'),
-    wrightt(Image: '', wrighte:'Asad Parvez', data: '৩টি'),
-      wrightt(Image: 'assets/wright2.jpg', wrighte:'Ustadh Nouman', data: '৫টি বই'),
-        wrightt(Image: '', wrighte:'Asad Parvez', data: '৩টি'),
-          wrightt(Image: 'assets/wright3.jpg', wrighte:'Abul Assad', data: '৩টি বই'),
-            wrightt(Image: 'assets/wright1.jpg', wrighte:'Asad Parvez', data: '৭টি বই'),
-              wrightt(Image: 'assets/wright4.jpg', wrighte:'D. Mobarak Hossain', data: '২টি বই'),
-                wrightt(Image: 'assets/wright1.jpg', wrighte:'Subrata Kumar Das', data: '৩টি বই'),
+  wrightt(Image: 'assets/prokash1.jpg', wrighte:'Ustadh Nouman', data: '২টি বই'),
+    wrightt(Image: 'assets/prokash6.jpg', wrighte:'Asad Parvez', data: '৩টি'),
+      wrightt(Image: 'assets/prokash2.jpg', wrighte:'Ustadh Nouman', data: '৫টি বই'),
+        wrightt(Image: 'assets/prokash3.jpg', wrighte:'Asad Parvez', data: '৩টি'),
+          wrightt(Image: 'assets/prokash4.jpg', wrighte:'Abul Assad', data: '৩টি বই'),
+            wrightt(Image: 'assets/prokash5.jpg', wrighte:'Asad Parvez', data: '৭টি বই'),
+              wrightt(Image: 'assets/prokash6.jpg', wrighte:'D. Mobarak Hossain', data: '২টি বই'),
+                wrightt(Image: 'assets/prokash7.jpgg', wrighte:'Subrata Kumar Das', data: '৩টি বই'),
                   wrightt(Image: 'assets/wright5.jpg', wrighte:'D. Mobarak Hossain', data: '২টি বই'),
                     wrightt(Image: 'assets/wright1.jpg', wrighte:'Ustadh Nouman', data: '৯টি বই'),
                       wrightt(Image: 'assets/wright6.jpg', wrighte:'D. Mobarak Hossain', data: '৩টি বই'),
