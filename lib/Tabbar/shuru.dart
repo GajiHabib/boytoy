@@ -34,42 +34,47 @@ class Shuru extends StatelessWidget {
           children: [
             Expanded(child: Image.asset('assets/boy.jpg')),
             SizedBox(
-              width: 10,
+              width:5,
             ),
             Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  'তোমার মনের মধ্যিখানি',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'তোমার মনের মধ্যিখানি',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                     textAlign: TextAlign.left,
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                Text('মিমি মুসকান'),
+                Align(
+                  alignment: Alignment.bottomLeft,
+                  child: Text('মিমি মুসকান', textAlign: TextAlign.left,)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Published by'),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Published by', textAlign: TextAlign.left,)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Published Date'),
+              
+              
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text('Categories', textAlign: TextAlign.left,)),
                 SizedBox(
                   height: 20,
                 ),
-                Text('Language'),
-                SizedBox(
-                  height: 20,
-                ),
-                Text('Categories'),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  '60৳',
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    '60৳',
+                    style: TextStyle(fontWeight: FontWeight.bold), textAlign: TextAlign.left,
+                  ),
                 ),
               ],
             )
@@ -125,22 +130,32 @@ class BooksGridView extends StatelessWidget {
                     child: Image.asset(bookInfo.img, fit: BoxFit.fill),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 15,
                   ),
                   Expanded(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
-                          bookInfo.title,
-                          style: TextStyle(fontSize: 16),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            bookInfo.title,
+                            style: TextStyle(fontSize: 16),
+                             textAlign: TextAlign.left,
+                          ),
                         ),
-                        Text(bookInfo.writer),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(bookInfo.writer, textAlign: TextAlign.left,)),
                         Text(bookInfo.tara),
-                        Text(
-                          bookInfo.price,
-                          style: TextStyle(fontSize: 11),
+                        Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            bookInfo.price,
+                            style: TextStyle(fontSize: 11),
+                             textAlign: TextAlign.left,
+                          ),
                         )
                       ],
                     ),

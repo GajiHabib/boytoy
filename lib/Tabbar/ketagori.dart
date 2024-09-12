@@ -24,15 +24,22 @@ final int index;
       'সমকালিন গল্প',
       'অডিও'
     ];
+    var data=['234','876','8765','98','765','87','876','786','432','345','76','90','76'];
     return Scaffold(
         body: ListView.separated(
       itemBuilder: (
         context, index) {
         return Card(
-          color: Colors.green.shade300,
+          color: Colors.green.shade100,
           child: ListTile(
-            title: Text(arrone[index]),
-            trailing: Icon(Icons.arrow_forward_ios),
+            title: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(arrone[index]),
+                Text(data[index])
+              ],
+            ),
+            trailing: Icon(Icons.arrow_forward_ios,color: Colors.blue,),
             leading: Image.asset(habi[index].Image),
             // leading: Container(
             //   height:50,
